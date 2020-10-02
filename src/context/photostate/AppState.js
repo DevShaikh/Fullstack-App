@@ -7,13 +7,13 @@ import {
   DELETE_RECORD,
   SET_ALERT,
   CLEAR_RECORDS,
+  SEARCH_RECORDS,
   SET_LOADING,
 } from '../types';
 
 const AppState = props => {
   const initState = {
     records: [],
-    selectedRecord: {},
     loading: false,
     alert: null,
   };
@@ -24,6 +24,42 @@ const AppState = props => {
     dispatch({type: SET_LOADING, payload: true});
 
     const res = await axios.get('http://localhost:8850/records');
+
+    dispatch({
+      type: GET_RECORDS,
+      payload: res.data,
+    });
+    dispatch({type: SET_LOADING, payload: false});
+  };
+
+  const searchRecords = async text => {
+    dispatch({type: SET_LOADING, payload: true});
+
+    const res = await axios.get(`http://localhost:8850/records?q=${text}`);
+    if (res.data === []) {
+      dispatch({
+        type: SET_ALERT,
+        payload: {msg: 'Nothing Matched!', type: 'danger'},
+      });
+      setTimeout(() => {
+        dispatch({
+          type: SET_ALERT,
+          payload: null,
+        });
+      }, 3000);
+    } else {
+      dispatch({
+        type: SEARCH_RECORDS,
+        payload: res.data,
+      });
+    }
+
+    dispatch({type: SET_LOADING, payload: false});
+  };
+
+  const clearSearch = async text => {
+    dispatch({type: SET_LOADING, payload: true});
+    const res = await axios.get(`http://localhost:8850/records`);
 
     dispatch({
       type: GET_RECORDS,
@@ -79,6 +115,16 @@ const AppState = props => {
     dispatch({
       type: CLEAR_RECORDS,
     });
+    dispatch({
+      type: SET_ALERT,
+      payload: {msg: 'Records has been cleared!', type: 'success'},
+    });
+    setTimeout(() => {
+      dispatch({
+        type: SET_ALERT,
+        payload: null,
+      });
+    }, 3000);
     dispatch({type: SET_LOADING, payload: false});
   };
 
@@ -93,6 +139,8 @@ const AppState = props => {
         postRecord,
         deleteRecord,
         clearRecords,
+        searchRecords,
+        clearSearch,
       }}
     >
       {props.children}

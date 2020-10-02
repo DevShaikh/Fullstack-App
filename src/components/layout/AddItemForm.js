@@ -63,9 +63,18 @@ const AddItemForm = () => {
   const addRecord = e => {
     e.preventDefault();
     postRecord(record);
-    e.target.reset();
+    clearInputs(e);
   };
 
+  const clearInputs = e => {
+    e.target.reset();
+    setPages('');
+    setOwnerName('');
+    setPageSize('');
+    setBinding('');
+    setQuantity('');
+    setRate('');
+  };
   return (
     <form onSubmit={addRecord}>
       <h2>Add Record</h2>

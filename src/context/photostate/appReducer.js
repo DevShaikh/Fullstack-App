@@ -4,6 +4,7 @@ import {
   GET_RECORDS,
   SET_ALERT,
   SET_LOADING,
+  SEARCH_RECORDS,
 } from '../types';
 
 export default (state, action) => {
@@ -22,6 +23,11 @@ export default (state, action) => {
       return {
         ...state,
         records: [],
+      };
+    case SEARCH_RECORDS:
+      return {
+        ...state,
+        records: action.payload,
       };
     case SET_LOADING:
       return {

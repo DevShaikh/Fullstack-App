@@ -28,6 +28,7 @@ const Home = () => {
       <div className="card shadow-sm">
         <div className="card-header d-flex justify-content-between">
           <h3 className="mb-0">Records List</h3>
+          <Search />
           {records.length > 0 && (
             <button
               className="btn btn-danger"
@@ -38,7 +39,6 @@ const Home = () => {
             </button>
           )}
         </div>
-        <Search />
         <div className="card-body" style={{overflowX: 'scroll'}}>
           {records.length !== 0 ? (
             <table className="table table-hover">
@@ -63,9 +63,7 @@ const Home = () => {
               </tbody>
             </table>
           ) : (
-            <h5 className="text-center">
-              There is no record added! Please add some records.
-            </h5>
+            <h5 className="text-center">There is no record!</h5>
           )}
         </div>
       </div>

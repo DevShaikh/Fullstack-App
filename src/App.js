@@ -32,6 +32,8 @@ function App() {
                 © 2020 Copyright:
                 <a
                   href="https://www.github.com/N2SPARTAN"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{textDecoration: 'none'}}
                 >
                   {' '}
