@@ -1,0 +1,56 @@
+{
+  "records": [
+    {
+      "className": "Class: IX",
+      "subjectName": "Computer Science",
+      "ownerName": "GEXTON",
+      "pages": 250,
+      "pageSize": "A5",
+      "printSide": "Single",
+      "binding": "Yes",
+      "quantity": 3,
+      "rate": 2,
+      "bill": 1520,
+      "id": 1
+    },
+    {
+      "className": "Class: XII",
+      "subjectName": "Computer Science",
+      "ownerName": "GEXTON",
+      "pages": 250,
+      "pageSize": "B5",
+      "printSide": "Single",
+      "binding": "No",
+      "quantity": 3,
+      "rate": 2,
+      "bill": 1500,
+      "id": 2
+    },
+    {
+      "className": "Class: XII",
+      "subjectName": "Math",
+      "ownerName": "TABZ",
+      "pages": 120,
+      "pageSize": "B5",
+      "printSide": "Double",
+      "binding": "Yes",
+      "quantity": 2,
+      "rate": 2,
+      "bill": 510,
+      "id": 3
+    },
+    {
+      "className": "Class: XI",
+      "subjectName": "Computer Science",
+      "ownerName": "TABZ",
+      "pages": 120,
+      "pageSize": "A5",
+      "printSide": "Double",
+      "binding": "Yes",
+      "quantity": 2,
+      "rate": 2,
+      "bill": 500,
+      "id": 4
+    }
+  ]
+}
