@@ -8,6 +8,7 @@ import Navbar from './components/layout/Navbar';
 import AppState from './context/photostate/AppState';
 import {Alert} from './components/layout/Alert';
 import './bootstrap.min.css';
+import './index.css';
 
 function App() {
   return (

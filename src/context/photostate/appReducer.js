@@ -1,5 +1,4 @@
 import {
-  CLEAR_RECORDS,
   DELETE_RECORD,
   GET_RECORDS,
   SET_ALERT,
@@ -18,11 +17,6 @@ export default (state, action) => {
       return {
         ...state,
         records: action.payload,
-      };
-    case CLEAR_RECORDS:
-      return {
-        ...state,
-        records: [],
       };
     case SEARCH_RECORDS:
       return {

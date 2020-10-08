@@ -17,3 +17,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.page-footer {
+  clear: both;
+  position: relative;
+  height: 200px;
+  margin-top: -200px;
+}

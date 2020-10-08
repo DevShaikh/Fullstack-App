@@ -6,7 +6,6 @@ import {
   GET_RECORDS,
   DELETE_RECORD,
   SET_ALERT,
-  CLEAR_RECORDS,
   SEARCH_RECORDS,
   SET_LOADING,
 } from '../types';
@@ -105,29 +104,6 @@ const AppState = props => {
     getRecords();
   };
 
-  const clearRecords = async () => {
-    dispatch({type: SET_LOADING, payload: true});
-
-    state.records.forEach(async record => {
-      await axios.delete(`http://localhost:8850/records/${record.id}`);
-    });
-
-    dispatch({
-      type: CLEAR_RECORDS,
-    });
-    dispatch({
-      type: SET_ALERT,
-      payload: {msg: 'Records has been cleared!', type: 'success'},
-    });
-    setTimeout(() => {
-      dispatch({
-        type: SET_ALERT,
-        payload: null,
-      });
-    }, 3000);
-    dispatch({type: SET_LOADING, payload: false});
-  };
-
   return (
     <AppContext.Provider
       value={{
@@ -138,7 +114,6 @@ const AppState = props => {
         getRecords,
         postRecord,
         deleteRecord,
-        clearRecords,
         searchRecords,
         clearSearch,
       }}

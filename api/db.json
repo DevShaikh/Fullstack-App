@@ -1,29 +1,29 @@
 {
   "records": [
     {
-      "className": "Class: IX",
-      "subjectName": "Computer Science",
-      "ownerName": "Gexton",
-      "pages": 22,
-      "pageSize": "A5",
+      "className": "Class IX",
+      "subjectName": "Urdu",
+      "ownerName": "IBN E SINA ",
+      "pages": 140,
+      "pageSize": "A4",
       "printSide": "Double",
       "binding": "Yes",
-      "quantity": 2,
-      "rate": 2,
-      "bill": 108,
+      "quantity": 1,
+      "rate": 1.5,
+      "bill": 240,
       "id": 1
     },
     {
-      "className": "Class: IX",
-      "subjectName": "Physics",
-      "ownerName": "TABZ",
-      "pages": 21,
-      "pageSize": "B5",
-      "printSide": "Single",
+      "className": "Class X",
+      "subjectName": "Sindhi",
+      "ownerName": "Adamjee",
+      "pages": 64,
+      "pageSize": "A4",
+      "printSide": "Double",
       "binding": "Yes",
-      "quantity": 22,
-      "rate": 2,
-      "bill": 954,
+      "quantity": 1,
+      "rate": 1.5,
+      "bill": 126,
       "id": 2
     }
   ]

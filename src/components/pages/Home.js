@@ -3,23 +3,16 @@ import Records from '../records/Records';
 import Search from '../layout/Search';
 import Loading from '../layout/Loading';
 import AppContext from '../../context/photostate/appContext';
-import {FaRecycle} from 'react-icons/fa';
 
 const Home = () => {
   const appContext = useContext(AppContext);
 
-  const {getRecords, clearRecords, records, loading} = appContext;
+  const {getRecords, records, loading} = appContext;
 
   useEffect(() => {
     getRecords();
     // eslint-disable-next-line
   }, []);
-
-  const clearRecordsClick = () => {
-    if (window.confirm('Are you sure!\nThis will no revert.')) {
-      clearRecords();
-    }
-  };
 
   if (loading) {
     return <Loading />;
@@ -29,15 +22,6 @@ const Home = () => {
         <div className="card-header d-flex justify-content-between">
           <h3 className="mb-0">Records List</h3>
           <Search />
-          {records.length > 0 && (
-            <button
-              className="btn btn-danger"
-              onClick={clearRecordsClick}
-              style={{width: '150px'}}
-            >
-              <FaRecycle></FaRecycle>&nbsp;Clear All
-            </button>
-          )}
         </div>
         <div className="card-body" style={{overflowX: 'scroll'}}>
           {records.length !== 0 ? (

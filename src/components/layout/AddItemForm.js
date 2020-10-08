@@ -93,10 +93,10 @@ const AddItemForm = () => {
               required
             >
               <option value="">Select Class</option>
-              <option value="Class: IX">Class: IX</option>
-              <option value="Class: X">Class: X</option>
-              <option value="Class: XI">Class: XI</option>
-              <option value="Class: XII">Class: XII</option>
+              <option value="Class IX">Class IX</option>
+              <option value="Class X">Class X</option>
+              <option value="Class XI">Class XI</option>
+              <option value="Class XII">Class XII</option>
             </select>
           </div>
         </div>
@@ -115,10 +115,11 @@ const AddItemForm = () => {
               <option value="">Select Subject</option>
               <option value="Urdu">Urdu</option>
               <option value="English">English</option>
-              <option value="Math">Math</option>
+              <option value="Islamiyat">Islamiyat</option>
+              <option value="Sindhi">Sindhi</option>
               <option value="Chemistry">Chemistry</option>
               <option value="Physics">Physics</option>
-              <option value="Computer Science">Computer Science</option>
+              <option value="Computer">Computer</option>
               <option value="Biology">Biology</option>
             </select>
           </div>
