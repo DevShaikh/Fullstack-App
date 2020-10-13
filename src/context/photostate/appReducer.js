@@ -4,6 +4,10 @@ import {
   SET_ALERT,
   SET_LOADING,
   SEARCH_RECORDS,
+  CALC_TOTAL_AMOUNT,
+  DELETE_CART,
+  ADD_CART,
+  DISCOUNT,
 } from '../types';
 
 export default (state, action) => {
@@ -22,6 +26,26 @@ export default (state, action) => {
       return {
         ...state,
         records: action.payload,
+      };
+    case ADD_CART:
+      return {
+        ...state,
+        cartRecords: action.payload,
+      };
+    case DELETE_CART:
+      return {
+        ...state,
+        cartRecords: action.payload,
+      };
+    case CALC_TOTAL_AMOUNT:
+      return {
+        ...state,
+        totalAmount: action.payload,
+      };
+    case DISCOUNT:
+      return {
+        ...state,
+        discount: action.payload,
       };
     case SET_LOADING:
       return {

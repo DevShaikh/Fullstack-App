@@ -17,7 +17,7 @@ const AddItemForm = () => {
   const [pageSize, setPageSize] = useState('');
   const [printSide, setPrintSide] = useState('');
   const [binding, setBinding] = useState('');
-  const [quantity, setQuantity] = useState('');
+  const [quantity, setQuantity] = useState(1);
   const [rate, setRate] = useState('');
 
   const classChange = e => setClassName(e.target.value);
@@ -27,7 +27,6 @@ const AddItemForm = () => {
   const pageSizeChange = e => setPageSize(e.target.value);
   const printSideChange = e => setPrintSide(e.target.value);
   const bindingChange = e => setBinding(e.target.value);
-  const quantityChange = e => setQuantity(parseInt(e.target.value));
   const rateChange = e => setRate(parseFloat(e.target.value));
 
   const record = {
@@ -225,12 +224,11 @@ const AddItemForm = () => {
             </label>
             <input
               type="number"
-              value={quantity}
+              value="1"
               className="form-control"
               placeholder="Type here..."
               id="quantity"
-              required
-              onChange={quantityChange}
+              disabled
               autoComplete="off"
             />
           </div>

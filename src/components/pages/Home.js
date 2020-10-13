@@ -25,7 +25,7 @@ const Home = () => {
         </div>
         <div className="card-body" style={{overflowX: 'scroll'}}>
           {records.length !== 0 ? (
-            <table className="table table-hover">
+            <table className="table table-hover" style={{minWidth: '1110px'}}>
               <thead>
                 <tr>
                   <th>#</th>
@@ -39,6 +39,7 @@ const Home = () => {
                   <th>Quantity</th>
                   <th>Rate</th>
                   <th>Bill</th>
+                  <th></th>
                   <th></th>
                 </tr>
               </thead>

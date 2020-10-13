@@ -1,15 +1,20 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useContext} from 'react';
 import {Link} from 'react-router-dom';
+import {FaShoppingCart} from 'react-icons/fa';
+import AppContext from '../../context/photostate/appContext';
 
 const Navbar = () => {
+  const appContext = useContext(AppContext);
+  const {cartRecords} = appContext;
+
   return (
     <Fragment>
       <nav className="navbar navbar-dark bg-warning mb-4 shadow-sm">
-        <div className="container-fluid d-flex justify-content-start ">
-          <a href="/" className="navbar-brand mr-4">
+        <div className="container-fluid d-flex justify-content-between ">
+          <a href="/" className="navbar-brand m-0">
             Nabiha Photostate
           </a>
-          <ul className="list-inline m-0 ml-sm-4">
+          <ul className="list-inline m-0 m-0">
             <li className="list-inline-item">
               <Link
                 to="/"
@@ -38,6 +43,17 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
+          <Link to="/cart" className="btn btn-warning">
+            <FaShoppingCart
+              className="text-light mr-1"
+              style={{fontSize: '1.6rem'}}
+            />
+            {cartRecords.length > 0 && (
+              <span className="badge badge-danger text-light">
+                {cartRecords.length}
+              </span>
+            )}
+          </Link>
         </div>
       </nav>
     </Fragment>

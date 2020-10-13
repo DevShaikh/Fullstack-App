@@ -40,7 +40,7 @@ const Search = () => {
       <div className="input-group-append">
         <button type="click" className="btn btn-dark" onClick={clearClick}>
           <FaRecycle className="mr-1" />
-          Clear search
+          Reset
         </button>
       </div>
     </form>

@@ -1,1 +1,1 @@
-npm start
+serve -l 8800 -s build 

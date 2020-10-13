@@ -1,30 +1,43 @@
 {
   "records": [
     {
-      "className": "Class IX",
-      "subjectName": "Urdu",
-      "ownerName": "IBN E SINA ",
-      "pages": 140,
+      "className": "Class XII",
+      "subjectName": "English",
+      "ownerName": "Gexton",
+      "pages": 12,
       "pageSize": "A4",
-      "printSide": "Double",
+      "printSide": "Single",
       "binding": "Yes",
       "quantity": 1,
-      "rate": 1.5,
-      "bill": 240,
+      "rate": 12,
+      "bill": 174,
       "id": 1
     },
     {
-      "className": "Class X",
-      "subjectName": "Sindhi",
-      "ownerName": "Adamjee",
-      "pages": 64,
+      "className": "Class IX",
+      "subjectName": "English",
+      "ownerName": "Gexton",
+      "pages": 150,
+      "pageSize": "Legal",
+      "printSide": "Single",
+      "binding": "No",
+      "quantity": 1,
+      "rate": 2,
+      "bill": 300,
+      "id": 2
+    },
+    {
+      "className": "Class XII",
+      "subjectName": "Chemistry",
+      "ownerName": "Sualeh Sir",
+      "pages": 166,
       "pageSize": "A4",
       "printSide": "Double",
       "binding": "Yes",
       "quantity": 1,
-      "rate": 1.5,
-      "bill": 126,
-      "id": 2
+      "rate": 2,
+      "bill": 362,
+      "id": 3
     }
   ]
 }

@@ -1,7 +1,9 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Invoice from './components/pages/Invoice';
 import Home from './components/pages/Home';
 import AddItem from './components/pages/AddItem';
+import Cart from './components/pages/Cart';
 import About from './components/pages/About';
 import NotFound from './components/pages/NotFound';
 import Navbar from './components/layout/Navbar';
@@ -21,7 +23,9 @@ function App() {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/add_record" component={AddItem} />
+              <Route exact path="/cart" component={Cart} />
               <Route exact path="/about" component={About} />
+              <Route exact path="/cart/invoice" component={Invoice} />
               <Route component={NotFound} />
             </Switch>
           </div>
